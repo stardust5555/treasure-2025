@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+body,
+html {
+  margin: 0;
+  padding: 0rem;
+  background-color: #1b1b1b;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: '';
+  font-family: "Orbitron", sans-serif;
+  color: gold;
+}
+
+
 .lotr-intro {
   background: radial-gradient(#1a1a1a, #000);
   color: #f0e6d2;
