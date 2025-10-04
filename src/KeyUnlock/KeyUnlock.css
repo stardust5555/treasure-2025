@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton:ital@1&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font-family: 'Anton', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url(/public/image.png);
+}
+
+.key-unlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 4rem;
+  color: #ff3b00;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+}
+
+.key-label {
+  font-weight: 2000;
+  color: #ff3b00;
+  font-style: italic;
+  margin: 1rem 0 0.5rem;
+}
+
+.code-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.code-box {
+  width: 60px;
+  height: 70px;
+  font-size: 32px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #ff3b00;
+  color: #ff3b00;
+  outline: none;
+  font-family: 'Anton', sans-serif;
+  font-style: italic;
+}
+
+.unlock-button {
+  padding: 12px 36px;
+  font-size: 20px;
+  color: #000;
+  background-color: #ff3b00;
+  border: none;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-style: italic;
+}
+
+.unlock-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.error {
+  color: #ff3b00;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.code-box.correct {
+  border: 2px solid #999;
+  color: white;
+}
+
+.code-box.incorrect {
+  border: 2px solid #ff4444;
+  box-shadow: 0 0 8px #ff4444;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
