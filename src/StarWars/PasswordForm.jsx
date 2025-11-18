@@ -46,11 +46,12 @@ const PasswordForm = ({ onUnlock }) => {
   };
 
   return (
-    <div className="password-page">
-      <h1 className="subheading">Join the dark side</h1>
-      <h2 className="subheading">
-        <i>Use the force to decrypt the intergalactic code..</i>
-      </h2>
+     <div className="password-page">
+      <div className="crawl">
+        <div className="title">A LONG TIME AGO IN A GALAXY FAR, FAR AWAY...</div>
+        <p>        <i>The Force flows through all of time. Arrange these events in the order they happened, from ancient Jedi secrets to the Empire’s final fall. Only when time is restored will the hidden code reveal itself. Only then will the path forward become clear. Choose carefully, young Padawan. Use the force to decrypt the intergalactic code..</i></p>
+      </div>
+
       <div className="password-form">
         <form onSubmit={handleSubmit}>
           <input
