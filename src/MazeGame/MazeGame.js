@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./MazeGame.css"; // Add styles in separate CSS
+import ReactAudioPlayer from "react-audio-player";
 
 const DOOR_POS = { x: 16, y: 1 }; // Change to { x: 16, y: 1 } if that's your actual door
 
@@ -28,15 +29,27 @@ export default function MazeGame() {
   const [riddleAnswer, setRiddleAnswer] = useState("");
 
   const riddles = [
-    { question: "What has to be broken before you can use it?", answer: "egg" },
     {
       question:
-        "I’m tall when I’m young, and I’m short when I’m old. What am I?",
+      "What movie is this from: 'Kuch Kuch Hota Hai', 'Kabhi Khushi Kabie Gham', 'Kal Ho Naa Ho',  'Mohabbatein'?",
+      audio: "BoleChudiyan.mp3",
+      answer: "kabhi khushi kabie gham",
+    },
+    {
+      question: "What has to be broken before you can use it?",
+      audio: null,
+      answer: "egg",
+    },
+    {
+      question:
+        "I’m tall when I’m young, and I’m short when I’m old. What am I?kjkj",
+      audio: "BoleChudiyan.mp3",
       answer: "candle",
     },
     {
       question:
         "If you’re running in a race and you pass the person in second place, what place are you in?",
+      audio: null,
       answer: "second",
     },
   ];
@@ -211,6 +224,10 @@ export default function MazeGame() {
         <div className="riddle-box">
           <h3>🧝 Riddle of the Gate</h3>
           <p>{currentRiddle.question}</p>
+          {currentRiddle.audio && (
+            <ReactAudioPlayer src={currentRiddle.audio} controls />
+          )}
+
           <input
             type="text"
             value={riddleAnswer}
@@ -224,11 +241,9 @@ export default function MazeGame() {
 
       {doorUnlocked && (
         <div>
+          <h2 className="victory-message">🎉 You escaped the Mines of Moria</h2>
           <h2 className="victory-message">
-            🎉 You escaped the Mines of Moria</h2>
-          <h2 className="victory-message">
-            Quietly make your way to the
-            dining room.
+            Quietly make your way to the dining room.
           </h2>
         </div>
       )}
