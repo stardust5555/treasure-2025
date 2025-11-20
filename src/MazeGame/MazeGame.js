@@ -28,29 +28,54 @@ export default function MazeGame() {
   const [riddleMode, setRiddleMode] = useState(false);
   const [riddleAnswer, setRiddleAnswer] = useState("");
 
+  function speak(text) {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    // Optional: Choose a female voice
+    const voices = synth.getVoices();
+    const femaleEnglishVoice = voices.find(
+      (v) => v.lang === "en-US" && v.name.includes("Female")
+    );
+
+    if (femaleEnglishVoice) {
+      utterance.voice = femaleEnglishVoice;
+    }
+
+    synth.speak(utterance);
+  }
+
   const riddles = [
-    {
-      question:
-      "What movie is this from: 'Kuch Kuch Hota Hai', 'Kabhi Khushi Kabie Gham', 'Kal Ho Naa Ho',  'Mohabbatein'?",
-      audio: "BoleChudiyan.mp3",
-      answer: "kabhi khushi kabie gham",
-    },
-    {
-      question: "What has to be broken before you can use it?",
-      audio: null,
-      answer: "egg",
-    },
-    {
-      question:
-        "I’m tall when I’m young, and I’m short when I’m old. What am I?kjkj",
-      audio: "BoleChudiyan.mp3",
-      answer: "candle",
-    },
     {
       question:
         "If you’re running in a race and you pass the person in second place, what place are you in?",
       audio: null,
       answer: "second",
+    },
+    {
+      question:
+        "What movie is this from: 'Kuch Kuch Hota Hai', 'Kabhi Khushi Kabie Gham', 'Kal Ho Naa Ho' or  'Mohabbatein'?",
+      audio: "koi.mp3",
+      answer: "kuch kuch hota hai",
+    },
+    {
+      question:
+        "What movie is this from: 'Om Shanti Om', 'Main Hoon Na', 'Dil To Pagal Hai' or  'Mohabbatein'?",
+      audio: "checkThat.mp3",
+      answer: "main hoon na",
+    },
+    {
+      question:
+        "What movie is this from: 'Chandni', 'Maine Pyar Kiya', 'Qayamat Se Qayamat Tak' or  'Mohabbatein'?",
+      audio: "qsqt.mp3",
+      answer: "qayamat se qayamat tak",
+    },
+    {
+      question:
+        "Which artist wrote this song: 'Adele', 'Whitney Houston', 'Queen' or  'Elton John'?",
+      speak:
+        "And I wish you joy and happiness. But above all this, I wish you love.",
+      answer: "whitney houston",
     },
   ];
 
@@ -226,6 +251,11 @@ export default function MazeGame() {
           <p>{currentRiddle.question}</p>
           {currentRiddle.audio && (
             <ReactAudioPlayer src={currentRiddle.audio} controls />
+          )}
+          {currentRiddle.speak && (
+            <button onClick={() => speak(currentRiddle.speak)}>
+              🗣️ Play lyric
+            </button>
           )}
 
           <input
