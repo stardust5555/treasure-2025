@@ -23,12 +23,6 @@ const MazeIntroPage = ({ onContinue }) => {
         Rivendell, must brave the twisting halls, gather at least three lost rings,
         and find the Doors of Moria.
       </p>
-
-      <p>
-        But beware... The door will not open for strength of arms, nor by the
-        light of day. You must speak the secret, the Elvish word known only to
-        those who walk in wisdom. Fail, and you shall not pass. 🧙‍♂️
-      </p>
       <p>
         The ruins can only be braved in darkness. Choose a member of your
         fellowship. They will be blindfolded - guided only by the voices of their
@@ -37,8 +31,7 @@ const MazeIntroPage = ({ onContinue }) => {
       <p>
         From this moment forth, the following words cannot be spoken: "up, down,
         left, right, north, south, east, west, forwards or backwards" in any
-        tongue. If they are there will be a 30 second penalty for each word.
-        word.
+        language. If they are there will be a 10 second penalty for each word.
       </p>
 
       <p>

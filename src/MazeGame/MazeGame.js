@@ -34,7 +34,6 @@ export default function MazeGame() {
         "I’m tall when I’m young, and I’m short when I’m old. What am I?",
       answer: "candle",
     },
-    { question: "What gets bigger when more is taken away?", answer: "hole" },
     {
       question:
         "If you’re running in a race and you pass the person in second place, what place are you in?",
