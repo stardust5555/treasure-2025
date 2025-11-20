@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./PasswordForm.css";
 
-const CORRECT_PASSWORD = "b";
+const CORRECT_PASSWORD = "vtrhkbnx";
 
 const scrambleText = (text) => {
   const symbols = "!@#$%^&*()_+=-{}[]<>?/|~";

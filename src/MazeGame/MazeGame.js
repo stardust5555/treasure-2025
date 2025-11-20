@@ -253,9 +253,12 @@ export default function MazeGame() {
             <ReactAudioPlayer src={currentRiddle.audio} controls />
           )}
           {currentRiddle.speak && (
-            <button onClick={() => speak(currentRiddle.speak)}>
-              🗣️ Play lyric
-            </button>
+            <div>
+              <br />
+              <button onClick={() => speak(currentRiddle.speak)}>
+                🗣️ Play lyric
+              </button>
+            </div>
           )}
 
           <input
