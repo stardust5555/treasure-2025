@@ -28,23 +28,6 @@ export default function MazeGame() {
   const [riddleMode, setRiddleMode] = useState(false);
   const [riddleAnswer, setRiddleAnswer] = useState("");
 
-  function speak(text) {
-    const synth = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance(text);
-
-    // Optional: Choose a female voice
-    const voices = synth.getVoices();
-    const femaleEnglishVoice = voices.find(
-      (v) => v.lang === "en-US" && v.name.includes("Female")
-    );
-
-    if (femaleEnglishVoice) {
-      utterance.voice = femaleEnglishVoice;
-    }
-
-    synth.speak(utterance);
-  }
-
   const riddles = [
     {
       question:
@@ -54,28 +37,27 @@ export default function MazeGame() {
     },
     {
       question:
-        "What movie is this from: 'Kuch Kuch Hota Hai', 'Kabhi Khushi Kabie Gham', 'Kal Ho Naa Ho' or  'Mohabbatein'?",
+        "What movie is this from: a) 'Kuch Kuch Hota Hai', b) 'Kabhi Khushi Kabie Gham', c) 'Kal Ho Naa Ho' or  d) 'Mohabbatein'?",
       audio: "koi.mp3",
-      answer: "kuch kuch hota hai",
+      answer: "a",
     },
     {
       question:
-        "What movie is this from: 'Om Shanti Om', 'Main Hoon Na', 'Dil To Pagal Hai' or  'Mohabbatein'?",
+        "What movie is this from: a) 'Om Shanti Om', b) 'Main Hoon Na', c) 'Dil To Pagal Hai' or  d) 'Mohabbatein'?",
       audio: "checkThat.mp3",
-      answer: "main hoon na",
+      answer: "b",
     },
     {
       question:
-        "What movie is this from: 'Chandni', 'Maine Pyar Kiya', 'Qayamat Se Qayamat Tak' or  'Mohabbatein'?",
+        "What movie is this from: a) 'Chandni', b) 'Maine Pyar Kiya', c) 'Qayamat Se Qayamat Tak' or  d) 'Mohabbatein'?",
       audio: "qsqt.mp3",
-      answer: "qayamat se qayamat tak",
+      answer: "c",
     },
     {
       question:
-        "Which artist wrote this song: 'Adele', 'Whitney Houston', 'Queen' or  'Elton John'?",
-      speak:
-        "And I wish you joy and happiness. But above all this, I wish you love.",
-      answer: "whitney houston",
+        "Which artist wrote this song: a) 'Adele', b) 'Whitney Houston', c) 'Queen' or  d) 'Elton John'?",
+      audio: "whitney.mp3",
+      answer: "b",
     },
   ];
 
@@ -252,15 +234,6 @@ export default function MazeGame() {
           {currentRiddle.audio && (
             <ReactAudioPlayer src={currentRiddle.audio} controls />
           )}
-          {currentRiddle.speak && (
-            <div>
-              <br />
-              <button onClick={() => speak(currentRiddle.speak)}>
-                🗣️ Play lyric
-              </button>
-            </div>
-          )}
-
           <input
             type="text"
             value={riddleAnswer}
