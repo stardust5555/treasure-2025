@@ -249,7 +249,7 @@ export default function MazeGame() {
         <div>
           <h2 className="victory-message">🎉 You escaped the Mines of Moria</h2>
           <h2 className="victory-message">
-            Quietly make your way to the dining room.
+            Quietly make your way to the big tree.
           </h2>
         </div>
       )}

@@ -49,7 +49,7 @@ const PasswordForm = ({ onUnlock }) => {
      <div className="password-page">
       <div className="crawl">
         <div className="title">A LONG TIME AGO IN A GALAXY FAR, FAR AWAY...</div>
-        <p><i>The Force flows through all of time. Arrange these events in the order they happened, from ancient Jedi secrets to the Empire’s final fall. Only when time is restored will the hidden code reveal itself. Only then will the path forward become clear. Choose carefully, young Padawan. Use the force to decrypt the intergalactic code....</i></p>
+        <p><i>The Force flows through all of time. Arrange these events in the order they happened, from ancient Jedi secrets to the Empire’s final fall. Only when time is restored will the hidden code reveal itself. Choose carefully, young Padawan. Use the force to decrypt the intergalactic code....</i></p>
       </div>
 
       <div className="password-form">
