@@ -1,14 +1,10 @@
 import { useState } from "react";
-import PasswordForm from "./StarWars/PasswordForm";
-import MazeIntroPage from "./MazeGame/MazeIntroPage";
 import MazeGame from "./MazeGame/MazeGame";
 
 function App() {
   const [level, setLevel] = useState(0);
 
   // const goToSoundsRecall = () => setLevel(9);
-  const goToMazeIntro = () => setLevel(1);
-  const goToMazeGame = () => setLevel(2);
   const goToKeyUnlock = () => setLevel(2);
   // const goToBomberman = () => setLevel(3);
   // const goToQuiz = () => setLevel(4);
