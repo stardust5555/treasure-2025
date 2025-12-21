@@ -49,7 +49,19 @@ export default function MazeGame() {
     },
     {
       question:
-        "What movie is this from: a) 'Chandni', b) 'Maine Pyar Kiya', c) 'Qayamat Se Qayamat Tak' or  d) 'Mohabbatein'?",
+        "What movie is this from: a) 'Maine Pyar Kiya', b) 'Kabhi Khushi Kabie Gham', c) 'Qayamat Se Qayamat Tak' or  d) 'Sholay'?",
+      audio: "sholay.mp3",
+      answer: "d",
+    },
+    {
+      question:
+        "What movie is this from: a) 'Bobby', b) 'Maine Pyar Kiya', c) 'Qayamat Se Qayamat Tak' or  d) 'Mohabbatein'?",
+      audio: "bobby.mp3",
+      answer: "a",
+    },
+    {
+      question:
+        "What movie is this from: a) 'Bobby', b) 'Maine Pyar Kiya', c) 'Qayamat Se Qayamat Tak' or  d) 'Mohabbatein'?",
       audio: "mohabbatein.mp3",
       answer: "d",
     },
@@ -69,7 +81,7 @@ export default function MazeGame() {
       question:
         "What movie is this from: a) 'Om Shanti Om', b) 'Main Hoon Na', c) 'Dil To Pagal Hai' or  d) 'Mohabbatein'?",
       audio: "dilToPagalHai.mp3",
-      answer: "b",
+      answer: "c",
     },
     {
       question:
