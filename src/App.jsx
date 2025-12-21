@@ -16,9 +16,9 @@ function App() {
 
   return (
     <div style={{ textAlign: "center" }}>
-      {level === 0 && <PasswordForm onUnlock={goToMazeIntro} />}
-      {level === 1 && <MazeIntroPage onContinue={goToMazeGame} />}
-      {level === 2 && <MazeGame onWin={goToKeyUnlock} />}
+      {/* {level === 0 && <PasswordForm onUnlock={goToMazeIntro} />}
+      {level === 1 && <MazeIntroPage onContinue={goToMazeGame} />} */}
+      {level === 0 && <MazeGame onWin={goToKeyUnlock} />}
       {/* {level === 0 && <SoundsIntro onContinue={goToSoundsRecall}/>}
       {level === 9 && <SoundsRecall onWin={goToKeyUnlock} />} */}
       {/* {level === 0 && <MazeIntroPage onContinue={goToMazeGame} />}

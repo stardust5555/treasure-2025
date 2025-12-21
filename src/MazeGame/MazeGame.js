@@ -31,15 +31,27 @@ export default function MazeGame() {
   const riddles = [
     {
       question:
-        "If you’re running in a race and you pass the person in second place, what place are you in?",
+        "If a doctor gives you 3 pills and tells you to take one every hour, how many hours will they last? (Please type your answer as a number)",
       audio: null,
-      answer: "second",
+      answer: "2",
+    },
+    {
+      question:
+        "What number do you get when you multiply all numbers on a phone keypad? (Please type your answer as a number)",
+      audio: null,
+      answer: "0",
     },
     {
       question:
         "What movie is this from: a) 'Kuch Kuch Hota Hai', b) 'Kabhi Khushi Kabie Gham', c) 'Kal Ho Naa Ho' or  d) 'Mohabbatein'?",
       audio: "koi.mp3",
       answer: "a",
+    },
+    {
+      question:
+        "What movie is this from: a) 'Chandni', b) 'Maine Pyar Kiya', c) 'Qayamat Se Qayamat Tak' or  d) 'Mohabbatein'?",
+      audio: "mohabbatein.mp3",
+      answer: "d",
     },
     {
       question:
@@ -55,9 +67,15 @@ export default function MazeGame() {
     },
     {
       question:
-        "Which artist wrote this song: a) 'Adele', b) 'Whitney Houston', c) 'Queen' or  d) 'Elton John'?",
-      audio: "whitney.mp3",
+        "What movie is this from: a) 'Om Shanti Om', b) 'Main Hoon Na', c) 'Dil To Pagal Hai' or  d) 'Mohabbatein'?",
+      audio: "dilToPagalHai.mp3",
       answer: "b",
+    },
+    {
+      question:
+        "Which artist wrote this song: a) 'U2', b) 'Whitney Houston', c) 'Alicia Keys' or  d) 'Elton John'?",
+      audio: "alicia.mp3",
+      answer: "c",
     },
   ];
 
